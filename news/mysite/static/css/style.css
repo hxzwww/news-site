@@ -1,0 +1,11 @@
+html, body, body.login {
+    background-image: url(background/blur.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.errorlist {
+    color: red;
+}

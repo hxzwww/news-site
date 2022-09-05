@@ -1,0 +1,8 @@
+#header, .module h2, .module caption, .inline-group h2 {
+
+    color: black;
+}
+
+A, A:visited, A:activate, a.section:activate, a.section:link, a.section:visited {
+    color: #000000;
+}

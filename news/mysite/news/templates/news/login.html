@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Авторизация | {{ block.super }}
+{% endblock %}
+
+{% block navbar %}
+{% include 'inc/_nav_news.html' %}
+{% endblock %}
+
+{% block sidebar %} {% endblock %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block"> Авторизоваться </button>
+</form>
+
+{% endblock %}

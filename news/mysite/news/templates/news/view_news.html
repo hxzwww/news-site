@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ item.title }} | {{ block.super }}
+{% endblock %}
+
+{% block navbar %}
+{% include 'inc/_nav_news.html' %}
+{% endblock %}
+
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-header">
+        {{ item.category }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">
+            {{ item.title }}
+        </h5>
+        {% if item.photo %}
+        <img src="{{ item.photo.url }}" alt="" width="920" class="mr-3">
+        {% endif %}
+        <p class="card-text">{{ item.content }}</p>
+    </div>
+    <div class="cart-footer text-muted" align="right"> {{ item.created_at|timesince }} ago</div>
+</div>
+{% endblock %}
